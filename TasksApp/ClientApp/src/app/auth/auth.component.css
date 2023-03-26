@@ -1,0 +1,9 @@
+.forms {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 200px;
+}
+.submit {
+  margin-top: 10px;
+}

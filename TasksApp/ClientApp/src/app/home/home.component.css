@@ -1,0 +1,66 @@
+.action-buttons {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+}
+.delete {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  top: 7px;
+  right: 7px;
+}
+.delete:hover {
+  background-color: #dcdcdc;
+  border-radius: 50%;
+}
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+.task {
+  position: relative;
+  gap: 10px;
+  padding: 10px;
+  width: 400px;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 4px;
+}
+.name {
+  font-weight: 600;
+  font-size: 20px;
+}
+.description {
+  font-size: 15px;
+}
+footer {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.edit,
+.change-state {
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  width: 50%;
+}
+.edit:hover,
+.change-state:hover {
+  background-color: #8e8e8e;
+}
+.is-completed {
+  width: 50%;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgb(255, 149, 149);
+}
+.done {
+  background-color: rgb(150, 255, 150);
+}

@@ -1,0 +1,11 @@
+.content {
+  resize: vertical;
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wrong-fill {
+  color: red;
+}

@@ -1,0 +1,26 @@
+<div class="forms">
+  <div class="login">
+    <h1>Login</h1>
+    <div class="login-fields">
+      <div>Name:</div>
+      <input type="text" class="form-control" [(ngModel)]="loginName" />
+      <div>Password:</div>
+      <input type="text" class="form-control" [(ngModel)]="loginPassword" />
+    </div>
+    <button class="btn btn-primary submit" (click)="SubmitLogin()">
+      Log in
+    </button>
+  </div>
+  <div class="register">
+    <h1>Register</h1>
+    <div class="login-fields">
+      <div>Name:</div>
+      <input type="text" class="form-control" [(ngModel)]="regName" />
+      <div>Password:</div>
+      <input type="text" class="form-control" [(ngModel)]="regPassword" />
+    </div>
+    <button class="btn btn-primary submit" (click)="SubmitRegistration()">
+      Register
+    </button>
+  </div>
+</div>

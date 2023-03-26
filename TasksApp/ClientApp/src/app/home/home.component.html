@@ -1,0 +1,37 @@
+<h1 *ngIf="noTasks">Currently no tasks</h1>
+<div class="action-buttons">
+  <button class="fetch btn btn-warning" (click)="fetchTasks()">
+    fetch tasks
+  </button>
+  <button class="add-task btn btn-success" [routerLink]="['/new-task']">
+    add new task
+  </button>
+</div>
+
+<div class="tasks" *ngIf="tasks.length > 0">
+  <div class="task" *ngFor="let task of tasks">
+    <div class="delete" (click)="deleteTask(task)">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        viewBox="0 96 960 960"
+        width="20"
+      >
+        <path
+          d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"
+        />
+      </svg>
+    </div>
+    <div class="name">{{ task.name }}</div>
+    <div class="description">{{ task.description }}</div>
+    <footer>
+      <button class="edit" (click)="editTask(task)">EDIT</button>
+      <div class="is-completed" [ngClass]="{ done: task.isCompleted }">
+        {{ task.isCompleted ? "Done" : "Unfinished" }}
+      </div>
+      <button class="change-state" (click)="changeTaskState(task)">
+        {{ task.isCompleted ? "UNMARK" : "FINISH" }}
+      </button>
+    </footer>
+  </div>
+</div>
